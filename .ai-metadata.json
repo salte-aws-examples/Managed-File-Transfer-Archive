@@ -99,10 +99,10 @@
       "tool": "cursor"
     },
     "src/test/index.spec.ts": {
-      "lines_total": 1,
-      "lines_ai_generated": 1,
+      "lines_total": 251,
+      "lines_ai_generated": 251,
       "ai_percentage": 100.0,
-      "last_updated": "2026-08-03T19:37:44Z",
+      "last_updated": "2026-08-03T19:50:29Z",
       "tool": "cursor"
     },
     "package.json": {
