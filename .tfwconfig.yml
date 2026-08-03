@@ -1,0 +1,105 @@
+# Terraflow configuration
+# See: https://github.com/salte-common/terraflow/blob/main/docs/configuration.md
+#
+# All configuration options can also be set via environment variables with TERRAFLOW_ prefix:
+#   TERRAFLOW_CONFIG=/path/to/config.yml          # Path to config file
+#   TERRAFLOW_WORKSPACE=development               # Workspace name
+#   TERRAFLOW_WORKING_DIR=./terraform            # Terraform working directory
+#   TERRAFLOW_SKIP_COMMIT_CHECK=false            # Skip git commit validation
+#   TERRAFLOW_BACKEND=s3                         # Backend type (local, s3, azurerm, gcs)
+#   TERRAFLOW_SECRETS=aws-secrets                # Secrets provider (env, aws-secrets, azure-keyvault, gcp-secret-manager)
+#   TERRAFLOW_ASSUME_ROLE=arn:aws:iam::...       # AWS role ARN for assume role authentication
+#
+# Environment variables take precedence over this config file.
+
+# Cloud provider (required): aws | gcp | azure
+provider: aws
+
+# Working directory for terraform files (optional - defaults to ./terraform)
+# working-dir: ./terraform
+
+# Workspace derivation strategy (optional - uses sensible default)
+# workspace_strategy:
+#   - cli
+#   - env
+#   - tag
+#   - branch
+#   - hostname
+
+# Backend configuration (optional - defaults to local backend)
+# Uncomment and configure based on your provider:
+# backend:
+#   type: s3  # local, s3, azurerm, or gcs
+#   config:
+#     # Template variables are supported: ${VAR_NAME}
+#     # See documentation for available template variables
+#     
+#     # AWS S3 Backend:
+#     # bucket: ${AWS_REGION}-${AWS_ACCOUNT_ID}-terraform-state
+#     # key: ${GIT_REPOSITORY}
+#     # region: ${AWS_REGION}
+#     # dynamodb_table: terraform-statelock
+#     # encrypt: true
+#     # kms_key_id: arn:aws:kms:${AWS_REGION}:${AWS_ACCOUNT_ID}:key/your-key-id  # Optional: Customer-managed KMS key for encryption
+#     
+#     # Azure Backend:
+#     # storage_account_name: mystorageaccount
+#     # container_name: tfstate
+#     # key: terraform.tfstate
+#     # encryption: true  # Optional: Enable encryption (customer-managed keys configured at storage account level)
+#     
+#     # GCP Backend:
+#     # bucket: my-gcs-bucket
+#     # prefix: terraform/state
+#     # encryption_key: projects/PROJECT_ID/locations/LOCATION/keyRings/RING_NAME/cryptoKeys/KEY_NAME  # Optional: Customer-managed encryption key (CMEK)
+
+# Secrets management (optional)
+# secrets:
+#   provider: env  # env | aws-secrets | azure-keyvault | gcp-secret-manager
+#   config:
+#     # AWS Secrets Manager:
+#     # region: us-east-1
+#     # secret_name: Managed-File-Transfer-Archive/terraform-vars
+#     
+#     # Azure Key Vault:
+#     # vault_name: my-keyvault
+#     
+#     # GCP Secret Manager:
+#     # project_id: my-project
+
+# Authentication (optional)
+# auth:
+#   # AWS Assume Role:
+#   # assume_role:
+#   #   role_arn: arn:aws:iam::123456789012:role/TerraformRole
+#   #   session_name: terraflow-session
+#   #   duration: 3600
+#   
+#   # Azure Service Principal:
+#   # service_principal:
+#   #   client_id: your-client-id
+#   #   tenant_id: your-tenant-id
+#   #   client_secret: your-client-secret
+#   
+#   # GCP Service Account:
+#   # service_account:
+#   #   key_file: /path/to/service-account-key.json
+
+# Terraform variables (optional)
+# Variables defined here are automatically converted to TF_VAR_* environment variables
+# variables:
+#   environment: development
+
+# Validations (optional)
+# validations:
+#   allowed_workspaces:
+#     - development
+#     - staging
+#     - production
+
+# Logging (optional - defaults to level: info)
+# logging:
+#   level: info
+#   terraform_log: false
+#   terraform_log_level: TRACE
+

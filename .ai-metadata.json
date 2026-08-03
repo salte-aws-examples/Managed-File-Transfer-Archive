@@ -1,0 +1,166 @@
+{
+  "files": {
+    ".tfwconfig.yml": {
+      "lines_total": 106,
+      "lines_ai_generated": 106,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    ".env.example": {
+      "lines_total": 23,
+      "lines_ai_generated": 23,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    ".gitignore": {
+      "lines_total": 41,
+      "lines_ai_generated": 41,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    ".editorconfig": {
+      "lines_total": 11,
+      "lines_ai_generated": 11,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "README.md": {
+      "lines_total": 104,
+      "lines_ai_generated": 104,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    ".cursor/rules/terraform.mdc": {
+      "lines_total": 72,
+      "lines_ai_generated": 72,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    ".cursor/rules/ai-metadata.mdc": {
+      "lines_total": 59,
+      "lines_ai_generated": 59,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    ".cursor/rules/development-standards.mdc": {
+      "lines_total": 58,
+      "lines_ai_generated": 58,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "terraform/_init.tf": {
+      "lines_total": 29,
+      "lines_ai_generated": 29,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "terraform/inputs.tf": {
+      "lines_total": 11,
+      "lines_ai_generated": 11,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "terraform/locals.tf": {
+      "lines_total": 19,
+      "lines_ai_generated": 19,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "terraform/main.tf": {
+      "lines_total": 70,
+      "lines_ai_generated": 70,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "terraform/outputs.tf": {
+      "lines_total": 36,
+      "lines_ai_generated": 36,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "terraform/modules/inputs.tf": {
+      "lines_total": 6,
+      "lines_ai_generated": 6,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "terraform/modules/main.tf": {
+      "lines_total": 3,
+      "lines_ai_generated": 3,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "terraform/modules/outputs.tf": {
+      "lines_total": 3,
+      "lines_ai_generated": 3,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "src/main/index.ts": {
+      "lines_total": 13,
+      "lines_ai_generated": 13,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "src/test/index.spec.ts": {
+      "lines_total": 14,
+      "lines_ai_generated": 14,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "package.json": {
+      "lines_total": 33,
+      "lines_ai_generated": 33,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "tsconfig.json": {
+      "lines_total": 21,
+      "lines_ai_generated": 21,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    ".eslintrc.json": {
+      "lines_total": 26,
+      "lines_ai_generated": 26,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "jest.config.js": {
+      "lines_total": 21,
+      "lines_ai_generated": 21,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    ".prettierrc": {
+      "lines_total": 10,
+      "lines_ai_generated": 10,
+      "ai_percentage": 100,
+      "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    }
+  },
+  "metadata_version": "1.0"
+}
