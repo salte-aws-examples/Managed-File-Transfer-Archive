@@ -64,66 +64,45 @@
       "tool": "cursor"
     },
     "terraform/inputs.tf": {
-      "lines_total": 11,
-      "lines_ai_generated": 11,
-      "ai_percentage": 100,
-      "last_updated": "2026-08-03T19:31:36Z",
+      "lines_total": 1,
+      "lines_ai_generated": 1,
+      "ai_percentage": 100.0,
+      "last_updated": "2026-08-03T19:37:44Z",
       "tool": "cursor"
     },
     "terraform/locals.tf": {
-      "lines_total": 19,
-      "lines_ai_generated": 19,
-      "ai_percentage": 100,
-      "last_updated": "2026-08-03T19:31:36Z",
+      "lines_total": 1,
+      "lines_ai_generated": 1,
+      "ai_percentage": 100.0,
+      "last_updated": "2026-08-03T19:37:44Z",
       "tool": "cursor"
     },
     "terraform/main.tf": {
-      "lines_total": 70,
-      "lines_ai_generated": 70,
-      "ai_percentage": 100,
-      "last_updated": "2026-08-03T19:31:36Z",
+      "lines_total": 1,
+      "lines_ai_generated": 1,
+      "ai_percentage": 100.0,
+      "last_updated": "2026-08-03T19:37:44Z",
       "tool": "cursor"
     },
     "terraform/outputs.tf": {
-      "lines_total": 36,
-      "lines_ai_generated": 36,
-      "ai_percentage": 100,
-      "last_updated": "2026-08-03T19:31:36Z",
-      "tool": "cursor"
-    },
-    "terraform/modules/inputs.tf": {
-      "lines_total": 6,
-      "lines_ai_generated": 6,
-      "ai_percentage": 100,
-      "last_updated": "2026-08-03T19:31:36Z",
-      "tool": "cursor"
-    },
-    "terraform/modules/main.tf": {
-      "lines_total": 3,
-      "lines_ai_generated": 3,
-      "ai_percentage": 100,
-      "last_updated": "2026-08-03T19:31:36Z",
-      "tool": "cursor"
-    },
-    "terraform/modules/outputs.tf": {
-      "lines_total": 3,
-      "lines_ai_generated": 3,
-      "ai_percentage": 100,
-      "last_updated": "2026-08-03T19:31:36Z",
+      "lines_total": 1,
+      "lines_ai_generated": 1,
+      "ai_percentage": 100.0,
+      "last_updated": "2026-08-03T19:37:44Z",
       "tool": "cursor"
     },
     "src/main/index.ts": {
-      "lines_total": 13,
-      "lines_ai_generated": 13,
-      "ai_percentage": 100,
-      "last_updated": "2026-08-03T19:31:36Z",
+      "lines_total": 2,
+      "lines_ai_generated": 2,
+      "ai_percentage": 100.0,
+      "last_updated": "2026-08-03T19:37:44Z",
       "tool": "cursor"
     },
     "src/test/index.spec.ts": {
-      "lines_total": 14,
-      "lines_ai_generated": 14,
-      "ai_percentage": 100,
-      "last_updated": "2026-08-03T19:31:36Z",
+      "lines_total": 1,
+      "lines_ai_generated": 1,
+      "ai_percentage": 100.0,
+      "last_updated": "2026-08-03T19:37:44Z",
       "tool": "cursor"
     },
     "package.json": {
