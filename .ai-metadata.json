@@ -29,10 +29,10 @@
       "tool": "cursor"
     },
     "README.md": {
-      "lines_total": 104,
-      "lines_ai_generated": 104,
-      "ai_percentage": 100,
-      "last_updated": "2026-08-03T19:31:36Z",
+      "lines_total": 223,
+      "lines_ai_generated": 223,
+      "ai_percentage": 100.0,
+      "last_updated": "2026-08-03T21:34:46Z",
       "tool": "cursor"
     },
     ".cursor/rules/terraform.mdc": {
