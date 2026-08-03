@@ -17,6 +17,7 @@ data "archive_file" "lambda" {
 
 resource "aws_s3_bucket" "archive" {
   bucket = var.archive_bucket_name
+  tags   = merge(var.tags, { Name = var.archive_bucket_name })
 }
 
 resource "aws_s3_bucket_public_access_block" "archive" {
@@ -96,6 +97,7 @@ resource "aws_lambda_permission" "s3_invoke" {
 resource "aws_cloudwatch_log_group" "archive_lambda" {
   name              = var.lambda_log_group_name
   retention_in_days = 90
+  tags              = merge(var.tags, { Name = var.lambda_log_group_name })
 }
 
 resource "aws_lambda_function" "archive" {
@@ -119,11 +121,14 @@ resource "aws_lambda_function" "archive" {
     security_group_ids = var.security_group_ids
   }
 
+  tags = merge(var.tags, { Name = var.lambda_function_name })
+
   depends_on = [aws_cloudwatch_log_group.archive_lambda]
 }
 
 resource "aws_iam_role" "lambda_exec" {
   name = var.lambda_execution_role_name
+  tags = merge(var.tags, { Name = var.lambda_execution_role_name })
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"

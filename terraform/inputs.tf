@@ -38,6 +38,12 @@ variable "subnet_ids" {
   type        = list(string)
 }
 
+variable "tags" {
+  description = "Tags to apply to all taggable resources (merged with a Name tag derived from each resource name)"
+  type        = map(string)
+  default     = {}
+}
+
 variable "vpc_id" {
   description = "VPC ID for Lambda network placement"
   type        = string

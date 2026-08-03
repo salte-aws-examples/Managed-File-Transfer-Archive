@@ -4,14 +4,14 @@
       "lines_total": 115,
       "lines_ai_generated": 115,
       "ai_percentage": 100.0,
-      "last_updated": "2026-08-03T20:33:49Z",
+      "last_updated": "2026-08-03T21:45:18Z",
       "tool": "cursor"
     },
     ".env.example": {
       "lines_total": 23,
       "lines_ai_generated": 23,
-      "ai_percentage": 100,
-      "last_updated": "2026-08-03T19:31:36Z",
+      "ai_percentage": 100.0,
+      "last_updated": "2026-08-03T21:45:18Z",
       "tool": "cursor"
     },
     ".gitignore": {
@@ -29,10 +29,10 @@
       "tool": "cursor"
     },
     "README.md": {
-      "lines_total": 223,
-      "lines_ai_generated": 223,
+      "lines_total": 227,
+      "lines_ai_generated": 227,
       "ai_percentage": 100.0,
-      "last_updated": "2026-08-03T21:34:46Z",
+      "last_updated": "2026-08-03T21:51:33Z",
       "tool": "cursor"
     },
     ".cursor/rules/terraform.mdc": {
@@ -64,10 +64,10 @@
       "tool": "cursor"
     },
     "terraform/inputs.tf": {
-      "lines_total": 49,
-      "lines_ai_generated": 49,
+      "lines_total": 50,
+      "lines_ai_generated": 50,
       "ai_percentage": 100.0,
-      "last_updated": "2026-08-03T19:40:10Z",
+      "last_updated": "2026-08-03T21:51:33Z",
       "tool": "cursor"
     },
     "terraform/locals.tf": {
@@ -78,10 +78,10 @@
       "tool": "cursor"
     },
     "terraform/main.tf": {
-      "lines_total": 195,
-      "lines_ai_generated": 195,
+      "lines_total": 182,
+      "lines_ai_generated": 182,
       "ai_percentage": 100.0,
-      "last_updated": "2026-08-03T19:41:53Z",
+      "last_updated": "2026-08-03T21:51:33Z",
       "tool": "cursor"
     },
     "terraform/outputs.tf": {
@@ -138,6 +138,13 @@
       "lines_ai_generated": 10,
       "ai_percentage": 100,
       "last_updated": "2026-08-03T19:31:36Z",
+      "tool": "cursor"
+    },
+    "SPECIFICATION.md": {
+      "lines_total": 579,
+      "lines_ai_generated": 33,
+      "ai_percentage": 5.7,
+      "last_updated": "2026-08-03T21:51:33Z",
       "tool": "cursor"
     }
   },

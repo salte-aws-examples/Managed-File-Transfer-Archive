@@ -97,6 +97,7 @@ variables:
   primary_kms_key_alias: ${PRIMARY_KMS_KEY_ALIAS}
   security_group_ids: "${SECURITY_GROUP_IDS}"
   subnet_ids: "${SUBNET_IDS}"
+  tags: "${TAGS}"
   vpc_id: ${VPC_ID}
 
 # Validations (optional)

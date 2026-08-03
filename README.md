@@ -74,6 +74,8 @@ Detailed requirements live in [`SPECIFICATION.md`](./SPECIFICATION.md).
 | `aws_cloudwatch_log_group.archive_lambda` | Lambda logs (90-day retention) |
 | `aws_s3_bucket_notification.primary` | Wires primary bucket `ObjectCreated` → Lambda |
 
+All taggable resources (`aws_s3_bucket`, `aws_lambda_function`, `aws_iam_role`, `aws_cloudwatch_log_group`) receive `merge(var.tags, { Name = <resource name> })`, so a `Name` tag is always set from the resource’s configured name and combined with any tags passed in via `TAGS`.
+
 ### Data sources (existing platform)
 
 | Data source | Purpose |
@@ -182,6 +184,7 @@ Terraform inputs are declared in `terraform/inputs.tf` and supplied via `.tfwcon
 | `VPC_ID` | `vpc_id` |
 | `SUBNET_IDS` | `subnet_ids` (JSON array string) |
 | `SECURITY_GROUP_IDS` | `security_group_ids` (JSON array string) |
+| `TAGS` | `tags` (JSON object string) |
 
 Example `.env` entries:
 
@@ -191,6 +194,7 @@ PRIMARY_BUCKET_NAME='my-primary-bucket'
 PRIMARY_KMS_KEY_ALIAS='mft-default'
 SUBNET_IDS='["subnet-aaa","subnet-bbb"]'
 SECURITY_GROUP_IDS='["sg-ccc"]'
+TAGS='{"Project":"Managed-File-Transfer-Archive","ManagedBy":"terraform"}'
 ```
 
 See [Terraflow configuration docs](https://github.com/salte-common/terraflow/blob/main/docs/configuration.md) for backends, workspaces, and template variables (`AWS_REGION`, `AWS_ACCOUNT_ID`, etc.).

@@ -78,6 +78,12 @@ variable "lambda_log_group_name" {
   description = "Name of the CloudWatch log group for the archive Lambda"
   type        = string
 }
+
+variable "tags" {
+  description = "Tags to apply to all taggable resources (merged with a Name tag derived from each resource name)"
+  type        = map(string)
+  default     = {}
+}
 ```
 
 ---
@@ -158,6 +164,7 @@ data "archive_file" "lambda" {
 ```hcl
 resource "aws_s3_bucket" "archive" {
   bucket = var.archive_bucket_name
+  tags   = merge(var.tags, { Name = var.archive_bucket_name })
 }
 
 resource "aws_s3_bucket_public_access_block" "archive" {
@@ -262,6 +269,7 @@ resource "aws_lambda_permission" "s3_invoke" {
 resource "aws_cloudwatch_log_group" "archive_lambda" {
   name              = var.lambda_log_group_name
   retention_in_days = 90
+  tags              = merge(var.tags, { Name = var.lambda_log_group_name })
 }
 ```
 
@@ -289,6 +297,8 @@ resource "aws_lambda_function" "archive" {
     security_group_ids = var.security_group_ids
   }
 
+  tags = merge(var.tags, { Name = var.lambda_function_name })
+
   depends_on = [aws_cloudwatch_log_group.archive_lambda]
 }
 ```
@@ -298,6 +308,7 @@ resource "aws_lambda_function" "archive" {
 ```hcl
 resource "aws_iam_role" "lambda_exec" {
   name = var.lambda_execution_role_name
+  tags = merge(var.tags, { Name = var.lambda_execution_role_name })
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -547,8 +558,9 @@ LAMBDA_FUNCTION_NAME
 LAMBDA_EXECUTION_ROLE_NAME
 LAMBDA_LOG_GROUP_NAME
 VPC_ID
-SUBNET_IDS           # comma-separated
-SECURITY_GROUP_IDS   # comma-separated
+SUBNET_IDS           # JSON array string, e.g. ["subnet-aaa","subnet-bbb"]
+SECURITY_GROUP_IDS   # JSON array string, e.g. ["sg-ccc"]
+TAGS                 # JSON object string, e.g. {"Project":"mft-archive","ManagedBy":"terraform"}
 ```
 
 ---
