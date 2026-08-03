@@ -78,10 +78,10 @@
       "tool": "cursor"
     },
     "terraform/main.tf": {
-      "lines_total": 1,
-      "lines_ai_generated": 1,
+      "lines_total": 195,
+      "lines_ai_generated": 195,
       "ai_percentage": 100.0,
-      "last_updated": "2026-08-03T19:37:44Z",
+      "last_updated": "2026-08-03T19:41:53Z",
       "tool": "cursor"
     },
     "terraform/outputs.tf": {
