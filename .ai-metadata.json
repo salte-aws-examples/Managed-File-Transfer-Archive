@@ -85,10 +85,10 @@
       "tool": "cursor"
     },
     "terraform/outputs.tf": {
-      "lines_total": 1,
-      "lines_ai_generated": 1,
+      "lines_total": 19,
+      "lines_ai_generated": 19,
       "ai_percentage": 100.0,
-      "last_updated": "2026-08-03T19:37:44Z",
+      "last_updated": "2026-08-03T19:44:05Z",
       "tool": "cursor"
     },
     "src/main/index.ts": {
@@ -106,10 +106,10 @@
       "tool": "cursor"
     },
     "package.json": {
-      "lines_total": 33,
-      "lines_ai_generated": 33,
-      "ai_percentage": 100,
-      "last_updated": "2026-08-03T19:31:36Z",
+      "lines_total": 41,
+      "lines_ai_generated": 41,
+      "ai_percentage": 100.0,
+      "last_updated": "2026-08-03T19:44:05Z",
       "tool": "cursor"
     },
     "tsconfig.json": {
