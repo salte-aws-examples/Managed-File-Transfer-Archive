@@ -38,11 +38,6 @@ variable "subnet_ids" {
   type        = list(string)
 }
 
-variable "users_table_name" {
-  description = "Name of the existing DynamoDB users table — used to look up frequency by path components"
-  type        = string
-}
-
 variable "vpc_id" {
   description = "VPC ID for Lambda network placement"
   type        = string

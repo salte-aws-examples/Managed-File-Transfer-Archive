@@ -78,11 +78,6 @@ variable "lambda_log_group_name" {
   description = "Name of the CloudWatch log group for the archive Lambda"
   type        = string
 }
-
-variable "users_table_name" {
-  description = "Name of the existing DynamoDB users table — used to look up frequency by path components"
-  type        = string
-}
 ```
 
 ---
@@ -148,11 +143,6 @@ data "aws_s3_bucket" "primary" {
 # KMS key — single key used for both primary bucket decryption and archive bucket encryption
 data "aws_kms_key" "mft" {
   key_id = var.primary_kms_key_alias
-}
-
-# DynamoDB users table — referenced for IAM permissions
-data "aws_dynamodb_table" "users" {
-  name = var.users_table_name
 }
 
 # Lambda archive zip
@@ -298,7 +288,6 @@ resource "aws_lambda_function" "archive" {
   environment {
     variables = {
       ARCHIVE_BUCKET = var.archive_bucket_name
-      USERS_TABLE    = var.users_table_name
     }
   }
 
@@ -564,7 +553,6 @@ PRIMARY_KMS_KEY_ALIAS
 LAMBDA_FUNCTION_NAME
 LAMBDA_EXECUTION_ROLE_NAME
 LAMBDA_LOG_GROUP_NAME
-USERS_TABLE_NAME
 VPC_ID
 SUBNET_IDS           # comma-separated
 SECURITY_GROUP_IDS   # comma-separated

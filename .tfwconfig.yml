@@ -33,7 +33,7 @@ provider: aws
 #   config:
 #     # Template variables are supported: ${VAR_NAME}
 #     # See documentation for available template variables
-#     
+#
 #     # AWS S3 Backend:
 #     # bucket: ${AWS_REGION}-${AWS_ACCOUNT_ID}-terraform-state
 #     # key: ${GIT_REPOSITORY}
@@ -41,13 +41,13 @@ provider: aws
 #     # dynamodb_table: terraform-statelock
 #     # encrypt: true
 #     # kms_key_id: arn:aws:kms:${AWS_REGION}:${AWS_ACCOUNT_ID}:key/your-key-id  # Optional: Customer-managed KMS key for encryption
-#     
+#
 #     # Azure Backend:
 #     # storage_account_name: mystorageaccount
 #     # container_name: tfstate
 #     # key: terraform.tfstate
 #     # encryption: true  # Optional: Enable encryption (customer-managed keys configured at storage account level)
-#     
+#
 #     # GCP Backend:
 #     # bucket: my-gcs-bucket
 #     # prefix: terraform/state
@@ -60,10 +60,10 @@ provider: aws
 #     # AWS Secrets Manager:
 #     # region: us-east-1
 #     # secret_name: Managed-File-Transfer-Archive/terraform-vars
-#     
+#
 #     # Azure Key Vault:
 #     # vault_name: my-keyvault
-#     
+#
 #     # GCP Secret Manager:
 #     # project_id: my-project
 
@@ -74,21 +74,31 @@ provider: aws
 #   #   role_arn: arn:aws:iam::123456789012:role/TerraformRole
 #   #   session_name: terraflow-session
 #   #   duration: 3600
-#   
+#
 #   # Azure Service Principal:
 #   # service_principal:
 #   #   client_id: your-client-id
 #   #   tenant_id: your-tenant-id
 #   #   client_secret: your-client-secret
-#   
+#
 #   # GCP Service Account:
 #   # service_account:
 #   #   key_file: /path/to/service-account-key.json
 
 # Terraform variables (optional)
 # Variables defined here are automatically converted to TF_VAR_* environment variables
-# variables:
-#   environment: development
+# Values are interpolated from .env — see SPECIFICATION.md
+variables:
+  environment: ${ENVIRONMENT}
+  archive_bucket_name: ${ARCHIVE_BUCKET_NAME}
+  lambda_execution_role_name: ${LAMBDA_EXECUTION_ROLE_NAME}
+  lambda_function_name: ${LAMBDA_FUNCTION_NAME}
+  lambda_log_group_name: ${LAMBDA_LOG_GROUP_NAME}
+  primary_bucket_name: ${PRIMARY_BUCKET_NAME}
+  primary_kms_key_alias: ${PRIMARY_KMS_KEY_ALIAS}
+  security_group_ids: ${SECURITY_GROUP_IDS}
+  subnet_ids: ${SUBNET_IDS}
+  vpc_id: ${VPC_ID}
 
 # Validations (optional)
 # validations:

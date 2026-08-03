@@ -8,11 +8,6 @@ data "aws_kms_key" "mft" {
   key_id = var.primary_kms_key_alias
 }
 
-# DynamoDB users table — referenced for IAM permissions
-data "aws_dynamodb_table" "users" {
-  name = var.users_table_name
-}
-
 # Lambda archive zip
 data "archive_file" "lambda" {
   type        = "zip"
@@ -123,7 +118,6 @@ resource "aws_lambda_function" "archive" {
   environment {
     variables = {
       ARCHIVE_BUCKET = var.archive_bucket_name
-      USERS_TABLE    = var.users_table_name
     }
   }
 
