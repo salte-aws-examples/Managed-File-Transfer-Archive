@@ -160,13 +160,6 @@ resource "aws_s3_bucket" "archive" {
   bucket = var.archive_bucket_name
 }
 
-resource "aws_s3_bucket_versioning" "archive" {
-  bucket = aws_s3_bucket.archive.id
-  versioning_configuration {
-    status = "Enabled"
-  }
-}
-
 resource "aws_s3_bucket_public_access_block" "archive" {
   bucket                  = aws_s3_bucket.archive.id
   block_public_acls       = true
