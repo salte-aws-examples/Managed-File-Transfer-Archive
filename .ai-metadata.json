@@ -92,10 +92,10 @@
       "tool": "cursor"
     },
     "src/main/index.ts": {
-      "lines_total": 2,
-      "lines_ai_generated": 2,
+      "lines_total": 59,
+      "lines_ai_generated": 59,
       "ai_percentage": 100.0,
-      "last_updated": "2026-08-03T19:37:44Z",
+      "last_updated": "2026-08-03T19:45:41Z",
       "tool": "cursor"
     },
     "src/test/index.spec.ts": {
