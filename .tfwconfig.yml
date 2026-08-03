@@ -89,15 +89,14 @@ provider: aws
 # Variables defined here are automatically converted to TF_VAR_* environment variables
 # Values are interpolated from .env — see SPECIFICATION.md
 variables:
-  environment: ${ENVIRONMENT}
   archive_bucket_name: ${ARCHIVE_BUCKET_NAME}
   lambda_execution_role_name: ${LAMBDA_EXECUTION_ROLE_NAME}
   lambda_function_name: ${LAMBDA_FUNCTION_NAME}
   lambda_log_group_name: ${LAMBDA_LOG_GROUP_NAME}
   primary_bucket_name: ${PRIMARY_BUCKET_NAME}
   primary_kms_key_alias: ${PRIMARY_KMS_KEY_ALIAS}
-  security_group_ids: ${SECURITY_GROUP_IDS}
-  subnet_ids: ${SUBNET_IDS}
+  security_group_ids: "${SECURITY_GROUP_IDS}"
+  subnet_ids: "${SUBNET_IDS}"
   vpc_id: ${VPC_ID}
 
 # Validations (optional)

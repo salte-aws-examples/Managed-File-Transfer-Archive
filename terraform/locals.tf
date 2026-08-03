@@ -13,7 +13,7 @@ locals {
     }
     "production/monthly" = {
       ia_transition_days      = 7
-      glacier_transition_days = 30
+      glacier_transition_days = 37
       expiration_days         = 396
     }
     "production/quarterly" = {

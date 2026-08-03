@@ -1,26 +1,26 @@
-import { S3Client, CopyObjectCommand } from "@aws-sdk/client-s3";
-import { S3Event } from "aws-lambda";
-import { format } from "date-fns";
+import { S3Client, CopyObjectCommand } from '@aws-sdk/client-s3';
+import { S3Event } from 'aws-lambda';
+import { format } from 'date-fns';
 
 const s3 = new S3Client({});
 
-const VALID_FREQUENCIES = ["daily", "weekly", "monthly", "quarterly", "semi-annual", "annual"];
+const VALID_FREQUENCIES = ['daily', 'weekly', 'monthly', 'quarterly', 'semi-annual', 'annual'];
 
 const ARCHIVE_BUCKET = process.env.ARCHIVE_BUCKET;
 if (!ARCHIVE_BUCKET) {
-  throw new Error("ARCHIVE_BUCKET environment variable is required");
+  throw new Error('ARCHIVE_BUCKET environment variable is required');
 }
 
 export const handler = async (event: S3Event): Promise<void> => {
   // Shared UTC timestamp for all records in this invocation
-  const datetime = format(new Date(), "yyyyMMdd-HHmmss");
+  const datetime = format(new Date(), 'yyyyMMdd-HHmmss');
 
   for (const record of event.Records) {
     const sourceBucket = record.s3.bucket.name;
-    const sourceKey = decodeURIComponent(record.s3.object.key.replace(/\+/g, " "));
+    const sourceKey = decodeURIComponent(record.s3.object.key.replace(/\+/g, ' '));
 
     try {
-      const parts = sourceKey.split("/");
+      const parts = sourceKey.split('/');
 
       if (parts.length < 6) {
         console.error(`Unexpected key structure — skipping: ${sourceKey}`);
@@ -35,9 +35,9 @@ export const handler = async (event: S3Event): Promise<void> => {
       }
 
       // Split filename into basename and extension
-      const lastDot = filename.lastIndexOf(".");
+      const lastDot = filename.lastIndexOf('.');
       const basename = lastDot > -1 ? filename.slice(0, lastDot) : filename;
-      const ext = lastDot > -1 ? filename.slice(lastDot) : "";
+      const ext = lastDot > -1 ? filename.slice(lastDot) : '';
 
       // Construct archive key — frequency moved to second level
       const archiveKey = `${envPath}/${frequency}/${carrierId}/${partnerId}/${transferTypeId}/${basename}_${datetime}${ext}`;
@@ -47,7 +47,7 @@ export const handler = async (event: S3Event): Promise<void> => {
           CopySource: `${sourceBucket}/${sourceKey}`,
           Bucket: ARCHIVE_BUCKET,
           Key: archiveKey,
-          ServerSideEncryption: "aws:kms",
+          ServerSideEncryption: 'aws:kms',
         })
       );
 

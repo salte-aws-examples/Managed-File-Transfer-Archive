@@ -5,7 +5,7 @@ data "aws_s3_bucket" "primary" {
 
 # KMS key — single key used for both primary bucket decryption and archive bucket encryption
 data "aws_kms_key" "mft" {
-  key_id = var.primary_kms_key_alias
+  key_id = "alias/${var.primary_kms_key_alias}"
 }
 
 # Lambda archive zip
@@ -173,11 +173,6 @@ resource "aws_iam_role_policy" "lambda_exec" {
         Effect   = "Allow"
         Action   = ["kms:Decrypt", "kms:GenerateDataKey", "kms:DescribeKey"]
         Resource = data.aws_kms_key.mft.arn
-      },
-      {
-        Effect   = "Allow"
-        Action   = ["dynamodb:GetItem"]
-        Resource = data.aws_dynamodb_table.users.arn
       }
     ]
   })
