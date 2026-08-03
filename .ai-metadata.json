@@ -64,17 +64,17 @@
       "tool": "cursor"
     },
     "terraform/inputs.tf": {
-      "lines_total": 1,
-      "lines_ai_generated": 1,
+      "lines_total": 49,
+      "lines_ai_generated": 49,
       "ai_percentage": 100.0,
-      "last_updated": "2026-08-03T19:37:44Z",
+      "last_updated": "2026-08-03T19:40:10Z",
       "tool": "cursor"
     },
     "terraform/locals.tf": {
-      "lines_total": 1,
-      "lines_ai_generated": 1,
+      "lines_total": 41,
+      "lines_ai_generated": 41,
       "ai_percentage": 100.0,
-      "last_updated": "2026-08-03T19:37:44Z",
+      "last_updated": "2026-08-03T19:40:10Z",
       "tool": "cursor"
     },
     "terraform/main.tf": {
